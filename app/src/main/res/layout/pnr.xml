@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0873f5"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+
+        app:title="PNR Enquiry" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/pnr_entry">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:layout_margin="5dp"
+
+
+            android:hint="Enter 10 digit PNR Number"
+            android:background="#f9f9d3"
+            android:id="@+id/PNR" />
+
+        <Button
+            android:text="GET STATUS"
+            android:onClick="pnr_status"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/pnr_details"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="7dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="#091a9b"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:paddingTop="10dp"
+                    android:text="PNR NO:"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:textAlignment="center"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pnr_no" />
+
+                <TextView
+                    android:text="Train Name"
+                    android:textColor="#fff"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/train_name" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#0873f5"
+        android:layout_height="7dp" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#091a9b"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingTop="10dp"
+                android:text="DATE"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:textAlignment="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date" />
+
+            <TextView
+                android:text="Boarding point"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Boarding_point" />
+            <TextView
+                android:text="Reserved upto"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/reserved_upto" />
+            <TextView
+                android:text="class"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/res_class" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#a5b2c1"
+        android:layout_height="7dp" />
+    <TextView
+        android:text="Charting status"
+        android:textSize="22dp"
+        android:textColor="#fff"
+        android:background="#091a9b"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/charting_status"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#a5b2c1"
+        android:layout_height="7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#091a9b"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:text="S.No."
+               android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textColor="#fff"
+                android:layout_weight="0.2"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/text22"/>
+            <TextView
+                android:layout_width="0dp"
+                android:text="Booking Status (Coach No , Berth No., Quota)"
+                android:layout_weight="0.4"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:text="* Current Status (Coach No , Berth No.)"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="5dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passen_list">
+
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="12dp"
+            android:textColor="#ff32"
+            android:text="* Please Note that in case the Final Charts have not been prepared, the Current Status might upgrade/downgrade at a later stage."
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>
