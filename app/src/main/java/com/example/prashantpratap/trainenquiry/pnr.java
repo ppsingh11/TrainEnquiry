@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -167,7 +168,15 @@ public class pnr extends Activity {
                     Curr_st.add(curr_st);
                 }
 
-                list.setAdapter(new customise_pass_list(pnr.this));
+
+                customise_pass_list adp = new customise_pass_list(pnr.this);
+                list.setAdapter(adp);
+
+                ViewGroup.LayoutParams params = list.getLayoutParams();
+                params.height = 75* (adp.getCount());
+
+                list.setLayoutParams(params);
+                list.requestLayout();
                 ////////////////////////////////////////////////////////
 
                 PNR_Entery.setVisibility(View.GONE);
@@ -204,8 +213,8 @@ public class pnr extends Activity {
             Toast.makeText(this, "Please Enter a Valid PNR Number", Toast.LENGTH_SHORT).show();
         }
         else {
-            /*String link = "http://api.railwayapi.com/pnr_status/pnr/"+PNR+"/apikey/rayr3fsp/";*/
-            String link = "http://onlinevotingnitp.000webhostapp.com/pnr.php";
+            String link = "http://api.railwayapi.com/pnr_status/pnr/"+PNR+"/apikey/rayr3fsp/";
+            /*String link = "http://onlinevotingnitp.000webhostapp.com/pnr.php";*/
 
 
                   MyTask t = new MyTask();

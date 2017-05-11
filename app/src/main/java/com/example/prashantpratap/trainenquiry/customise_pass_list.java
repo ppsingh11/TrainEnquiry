@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class customise_pass_list extends BaseAdapter {
 
 
     TextView CURR_ST,BOOK_ST,NO;
+    ListView list;
 
     customise_pass_list(pnr p)
     {
@@ -44,15 +46,19 @@ public class customise_pass_list extends BaseAdapter {
 
         LayoutInflater inf = LayoutInflater.from(P);
         View v = inf.inflate(R.layout.customise_pass_list, null);
+
         CURR_ST = (TextView)v.findViewById(R.id.curr_st);
         BOOK_ST = (TextView)v.findViewById(R.id.book_st);
         NO = (TextView)v.findViewById(R.id.s_no);
+
 
         CURR_ST.setText(P.Curr_st.get(position));
         BOOK_ST.setText(P.Book_st.get(position));
         NO.setText("Passenger "+P.Pass_no.get(position));
 
-       // CURR_ST.setText("WL");
+
+
+
         return v;
     }
 
