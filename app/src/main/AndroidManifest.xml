@@ -21,6 +21,9 @@
         <activity android:name=".pnr"
             android:theme="@style/AppTheme"/>
 
+        <activity android:name=".fare"
+            android:theme="@style/AppTheme"/>
+
     </application>
 
 </manifest>

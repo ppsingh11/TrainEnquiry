@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void fare(View view) {
+
+        Intent i = new Intent(this,fare.class);
+        startActivity(i);
     }
 
     public void Running_st(View view) {
